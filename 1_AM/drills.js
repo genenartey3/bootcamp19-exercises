@@ -3,19 +3,41 @@ const assert = require("assert");
 // Feel free to look things up online!
 
 const tokenize = str => {
-  // TODO - write a function which converts a multi-word string into an array of words
+  // TODO - write a function which converts a multi-word string into an array of word
+  const arr = str.split("") 
+  return arr
+
 };
 
 const reverse = str => {
   // TODO - write a function which reverses the string
+  const brokenString = str.split("")
+  const flipped = brokenString.reverse()
+  const flipString = flipped.join("")
+  return flipString   
 };
 
 const uniqueOnes = arr => {
   // TODO - write a function which returns the inputted array without duplicate elements
+  function filter(arr)
+  {
+    const uniqueset = new Set (arr);
+    console.log(uniqueset);
+    const uniquearr = Array.from(uniqueset);
+    console.log(uniquearr);
+    return uniquearr
+  } 
 };
 
 const factorial = num => {
   // TODO - write a function which returns the factorial of a positive integer
+  let output = 1
+  for(i = 1, i <= num, i++)
+  {
+    output *= i 
+  }
+  return output
+
 };
 
 const zip = (arr1, arr2) => {
@@ -39,7 +61,7 @@ const announceDate = () => {
 };
 
 // Write tests here:
-
+assert(reverse("str") === "rts");
 assert(1 < 2);
 assert(1 + 2 === 3);
 assert([2, 3][0] === 2);
