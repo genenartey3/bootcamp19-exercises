@@ -32,10 +32,10 @@ const uniqueOnes = arr => {
 const factorial = num => {
   // TODO - write a function which returns the factorial of a positive integer
   let output = 1
-  for(i = 1, i <= num, i++)
-  {
-    output *= i 
-  }
+  for(let i = 1; i <= num; i++);
+    {
+      output *= i 
+    }
   return output
 
 };
@@ -44,10 +44,25 @@ const zip = (arr1, arr2) => {
   // TODO - write a function which combines two arrays into an array of 2-element arrays and returns -1
   // if the two arrays are of unequal length
   // Example: zip([1, 2, 3], [5, 3, 1]) === [[1, 5], [2, 3], [3, 1]]
+  if ( arr1.length != arr2.length)
+  {
+    return -1;
+  }
+  const bigarr = [];
+  for (i =  0; i <= arr1; i++ );
+    {
+      bigarr.push([arr1[i],arr2[i]]);
+    }
+  return bigarr  
 };
 
 const unzip = arr => {
-  // TODO - Write a function which does the opposite of `zip()`
+  // TODO - Write a function which does the opposite of `zip()
+  // Example unzip([[1, 5], [2, 3], [3, 1]]) === [1, 2, 3], [5, 3, 1]
+  for (let i = 0; i <= arr.length; i++);
+  {
+
+  }
 };
 
 const shiftRight = (str, num) => {

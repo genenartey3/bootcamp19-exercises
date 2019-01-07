@@ -5,7 +5,7 @@
 const coinToss = (guess, callback) => {
   const result = Math.round(Math.random());
   const didWin = guess === result;
-  callback(didWin);
+  callback1(didWin);
 };
 
 const getUser = callback => {
@@ -14,5 +14,9 @@ const getUser = callback => {
     lastName: "Doe",
     guess: Math.round(Math.random())
   };
-  callback(user);
+  callback2(user);
 };
+
+getUser((user) => {
+  coinToss(user.guess, console.log)
+}
