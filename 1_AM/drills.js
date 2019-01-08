@@ -49,25 +49,28 @@ const zip = (arr1, arr2) => {
     return -1;
   }
   const bigarr = [];
-  for (i =  0; i <= arr1; i++ );
-    {
-      bigarr.push([arr1[i],arr2[i]]);
-    }
+  for (let i =  0; i <= (arr1.length - 1); i++ )
+  {
+     bigarr.push([arr1[i],arr2[i]]);
+  }
+  console.log(bigarr);
   return bigarr  
 };
 
 const unzip = arr => {
   // TODO - Write a function which does the opposite of `zip()
   // Example unzip([[1, 5], [2, 3], [3, 1]]) === [1, 2, 3], [5, 3, 1]
-  for (let i = 0; i <= arr.length; i++);
-  {
-
-  }
+  
 };
 
 const shiftRight = (str, num) => {
   // TODO - write a function which shifts a string `num` characters to the right
   // Example = shiftThree("Hello") === "lloHe"
+  const shift = str.slice(0,(str.length - num));
+  console.log(shift);
+  const rest = str.slice((str.length - num), str.length);
+  console.log(rest);
+  return (rest + shift);
 };
 
 const announceDate = () => {
@@ -76,6 +79,7 @@ const announceDate = () => {
 };
 
 // Write tests here:
+assert(zip([1, 2, 3], [5, 3, 1]) === [[1, 5], [2, 3], [3, 1]]);
 assert(reverse("str") === "rts");
 assert(1 < 2);
 assert(1 + 2 === 3);

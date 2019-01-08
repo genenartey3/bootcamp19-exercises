@@ -5,7 +5,8 @@
 const hasFalsyValue = obj => {
   for( key in obj)
   {
-   if (!!(obj[key]) == "false") 
+   if (!!(obj[key]) == false) 
+      return true
   }
   return false;
 };
